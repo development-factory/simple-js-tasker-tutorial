@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header-logo {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+}
+
+#btnClear {
+    width: 100%;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
