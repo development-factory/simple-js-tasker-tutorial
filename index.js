@@ -7,20 +7,21 @@ submitButton.addEventListener("click", addTask);
 clearButton.addEventListener("click", clearList);
 tasks.addEventListener("click", handleTaskClick);
 
-displayMessage("Good, you have no tasks today!");
+displayMessage("Nu aveti nici un task astazi!");
 
 function clearList() {
     const taskList = tasks.getElementsByClassName("list-group-item");
     while (taskList.length > 0) {
         taskList[0].parentNode.removeChild(taskList[0]);
     }
-    displayMessage("Good, you have no tasks today!");
+    displayMessage("Nu aveti nici un task astazi!");
 }
 
 function handleTaskClick(event) {
     const style = event.target.style;
     if (!style.textDecoration) {
         style.textDecoration = "line-through";
+        style.textDecorationColor = "red";
     } else {
         style.textDecoration = "";
     }
@@ -33,7 +34,7 @@ function addTask() {
         messageElement.style.visibility = "hidden";        
         newTask.value = "";
     }else{
-        displayMessage("Please provide non empty input!");
+        displayMessage("Introduceti task-ul");
     }  
 }
 
